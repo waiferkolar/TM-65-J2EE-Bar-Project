@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org/">
+<head th:replace="master :: head"></head>
+<body>
+
+
+<div th:replace="master :: nav"></div>
+
+<!-- Content Area Start -->
+<div class="container my-5">
+
+    <h1 class="text-center text-info mb-5">Create New Dish</h1>
+    <div class="col-md-6 offset-md-3">
+        <form>
+            <div class="form-group">
+                <label for="name">Dish Name</label>
+                <input type="text" class="form-control rounded-0" id="name">
+            </div>
+            <div class="form-group">
+                <label for="price">Dish Price</label>
+                <input type="number" class="form-control rounded-0" id="price">
+            </div>
+            <button type="submit" class="btn btn-primary btn-sm float-right">Create</button>
+            <button type="reset" class="btn btn-outline-warning btn-sm float-right mr-2">Cancle</button>
+
+        </form>
+    </div>
+
+</div>
+<!-- Content Area End -->
+
+
+<div th:replace="master :: footer"></div>
+</body>
+</html>

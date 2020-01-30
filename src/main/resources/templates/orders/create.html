@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org/">
+<head th:replace="master :: head"></head>
+<body>
+
+
+<div th:replace="master :: nav"></div>
+
+
+<!-- Content Area Start -->
+<div class="container my-5">
+
+    <h1 class="text-center text-info mb-5">Add New Order</h1>
+    <div class="col-md-6 offset-md-3">
+        <form>
+            <div class="form-group">
+                <label for="table">Table Name</label>
+                <select class="form-control" id="table">
+                    <option value="1">Rangoon</option>
+                    <option value="1">Mandalay</option>
+                    <option value="1">Bagan</option>
+                    <option value="1">Innlay</option>
+                    <option value="1">Siggai</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dish">Dish Name</label>
+                <select class="form-control" id="dish">
+                    <option value="1">Pork Curry</option>
+                    <option value="1">Chicken Curry</option>
+                    <option value="1">WaterCress Fried</option>
+                    <option value="1">Fish Curry</option>
+                    <option value="1">Ton Yan Soup</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dish_count">Dish Count</label>
+                <input type="text" class="form-control rounded-0" id="dish_count">
+            </div>
+            <button type="submit" class="btn btn-primary btn-sm float-right">Order</button>
+            <button type="reset" class="btn btn-outline-warning btn-sm float-right mr-2">Cancle</button>
+
+        </form>
+    </div>
+
+
+</div>
+<!-- Content Area End -->
+
+<div th:replace="master :: footer"></div>
+</body>
+</html>

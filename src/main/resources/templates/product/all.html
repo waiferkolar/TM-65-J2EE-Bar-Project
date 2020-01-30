@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org/">
+<head th:replace="master :: head"></head>
+<body>
+
+<div th:replace="master :: nav"></div>
+
+<!-- Content Area Start -->
+<div class="container my-5">
+
+
+    <div class="row justify-content-between">
+        <div class="my-3">
+            <a href="/product/create" class="btn btn-primary btn-sm">Create <i class="fa fa-plus"></i></a>
+        </div>
+        <h1 class="text-center text-info mb-5">Chinese Restaurant</h1>
+        <div></div>
+    </div>
+
+    <div class="row" id="tableArea">
+
+        <table class="table table-bordered">
+            <thead>
+            <tr class="bg-dark text-white">
+                <th scope="col">No</th>
+                <th scope="col">Category</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Description</th>
+                <th scope="col">Action</th>
+            </tr>
+            </thead>
+            <tbody th:each="product : ${products}">
+            <tr>
+                <td th:text="${product.id}"></td>
+                <td th:text="${product.category.name}"></td>
+                <td th:text="${product.name}"></td>
+                <td th:text="${product.price}"></td>
+                <td th:text="${product.des}"></td>
+                <td>
+                    <a href="#" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
+                    <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+<!-- Content Area End -->
+
+
+<div th:replace="master :: footer"></div>
+</body>
+</html>

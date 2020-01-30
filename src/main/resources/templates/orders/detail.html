@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org/">
+<head th:replace="master :: head"></head>
+<body>
+
+
+<div th:replace="master :: nav"></div>
+
+<!-- Content Area Start -->
+<div class="container my-5">
+
+
+    <div class="row justify-content-between">
+        <div class="my-3">
+            <a href="#" class="btn btn-primary btn-sm">Create <i class="fa fa-plus"></i></a>
+        </div>
+        <h1 class="text-center text-info mb-5">Rangoon Table Orders</h1>
+        <div></div>
+    </div>
+
+    <div class="row" id="tableArea">
+
+        <table class="table table-bordered">
+            <thead>
+            <tr class="bg-dark text-white">
+                <th scope="col">No</th>
+                <th scope="col">Dish Name</th>
+                <th scope="col">Dish Count</th>
+                <th scope="col">Price</th>
+                <th scope="col">Total</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Rangoon</td>
+                <td>5</td>
+                <td>1200</td>
+                <td>6000</td>
+
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Pork Curry</td>
+                <td>7</td>
+                <td>4500</td>
+                <td>54000</td>
+
+            </tr>
+            </tbody>
+            <tbody>
+            <tr>
+                <td colspan=4 class="text-right text-success">Grand Total</td>
+                <td>54000</td>
+            </tr>
+            <tr>
+                <td colspan="5" class="text-right">
+                    <button class="btn btn-success btn-sm" onclick="printBill()">Bill Out <i
+                            class="fa fa-dollar"></i></button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+<!-- Content Area End -->
+
+
+<div th:replace="master :: footer"></div>
+</body>
+</html>

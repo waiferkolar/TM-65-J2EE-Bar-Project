@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org/">
+<head th:replace="master :: head"></head>
+<body>
+
+
+<div th:replace="master :: nav"></div>
+
+<!-- Content Area Start -->
+<div class="container my-5">
+
+    <h1 class="text-center text-info mb-5">Chinese Restaurant</h1>
+
+    <div class="row" id="cardArea">
+
+
+    </div>
+
+
+</div>
+<!-- Content Area End -->
+
+
+<div th:replace="master :: footer"></div>
+
+<script>
+    let cardArea = document.querySelector("#cardArea");
+    let str = "";
+    let links = [
+        {
+            "name": "tables",
+            "link": "tables",
+            "icon": "fa fa-table"
+        },
+        {
+            "name": "dishes",
+            "link": "dishes",
+            "icon": "fa fa-bullhorn"
+        },
+        {
+            "name": "orders",
+            "link": "orders",
+            "icon": "fa fa-list"
+        },
+        {
+            "name": "bill out",
+            "link": "bills",
+            "icon": "fa fa-dollar"
+        }
+
+    ];
+    links.forEach((link) => {
+        str += `
+                <div class="col-md-4 offset-md-1 mb-5">
+                 <a href="${link.link}" class="text-muted text-decoration-none">
+                    <div class="card rounded-0">
+                        <div class="card-body">
+                            <p class="card-text py-3 text-center">
+                             <i class="${link.icon} fa-3x text-warning"></i></i><br>
+                             <span class="fa fa-2x text-uppercase mt-3 text-info">${link.name}</span>
+
+                            </p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            `;
+    })
+    ;
+    cardArea.innerHTML = str;
+</script>
+</body>
+</html>
